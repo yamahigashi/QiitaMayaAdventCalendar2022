@@ -1,0 +1,152 @@
+[tool.black]
+line-length = 160
+
+# [tool.poetry.dependencies]
+
+[tool.poetry.dev-dependencies]
+pyright = "1.1.270"
+flake8-pyproject = "1.1.0"
+python-lsp-server =  "1.5.0"
+
+[tool.flake8]
+max-complexity = 10
+max-line-length = 160
+ignore = ["E221","E501","E241"]
+
+[tool.pylint."FORMAT"]
+max-line-length=160
+
+[tool.pylint."MESSAGES CONTROL"]
+enable=[
+]
+
+disable=[
+    # "assignment-from-no-return",
+    # "broad-except",
+    # "missing-class-docstring",
+    # "missing-function-docstring",
+    # "no-else-return",
+    # "raw-checker-failed",
+    # "unused-variable",
+
+    # "useless-else-on-loop",
+    # "useless-suppression",
+    # "use-symbolic-message-instead",
+
+    "bad-inline-option",
+    "consider-using-from-import",
+    "consider-using-f-string",
+    "file-ignored",
+    "import-error",
+    "import-outside-toplevel",
+    "invalid-name",
+    "line-too-long",
+    "locally-disabled",
+    "suppressed-message",
+    "too-few-public-methods",
+    "unnecessary-pass",
+    "using-constant-test",
+    "wrong-import-order",
+]
+
+
+[tool.pyright]
+# include = []
+extraPaths = [
+  # "**/python",  # wildcard does not supported here...
+  "python",
+  "vendor_python",
+  "lib",
+  "src",
+]
+
+exclude = [
+  "**/node_modules",
+  "**/__pycache__",
+]
+ignore = []
+# typeshedPath = "stubs"
+# typeshedPaths = ["stubs"]
+# extraPaths = ["typing"]
+
+reportUnusedImport = false
+reportMissingImports = false
+reportMissingTypeStubs = true
+reportMissingModuleSource = false
+
+pythonVersion = "3.10"
+pythonPlatform = "Windows"
+typeCheckingMode = "basic"
+
+# include                             [array of paths, optional]
+# exclude                             [array of paths, optional]
+# ignore                              [array of paths, optional]
+# strict                              [array of paths, optional]
+# typeshedPath                        [path, optional]
+# stubPath                            [path, optional]
+# venvPath                            [path, optional]
+# venv                                [string, optional]
+# verboseOutput                       [boolean]
+# extraPaths                          [array of strings, optional]
+# pythonVersion                       [string, optional]
+# pythonPlatform                      [string, optional]
+# executionEnvironments               [array of objects, optional]
+# typeCheckingMode                    ["off", "basic", "strict"]
+# useLibraryCodeForTypes              [boolean]
+# strictListInference                 [boolean]
+# strictDictionaryInference           [boolean]
+# strictSetInference                  [boolean]
+# strictParameterNoneValue            [boolean]
+# enableTypeIgnoreComments            [boolean]
+# reportGeneralTypeIssues             [boolean or string, optional]
+# reportPropertyTypeMismatch          [boolean or string, optional]
+# reportFunctionMemberAccess          [boolean or string, optional]
+# reportMissingImports                [boolean or string, optional]
+# reportMissingModuleSource           [boolean or string, optional]
+# reportMissingTypeStubs              [boolean or string, optional]
+# reportImportCycles                  [boolean or string, optional]
+# reportUnusedImport                  [boolean or string, optional]
+# reportUnusedClass                   [boolean or string, optional]
+# reportUnusedFunction                [boolean or string, optional]
+# reportUnusedVariable                [boolean or string, optional]
+# reportDuplicateImport               [boolean or string, optional]
+# reportWildcardImportFromLibrary     [boolean or string, optional]
+# reportOptionalSubscript             [boolean or string, optional]
+# reportOptionalMemberAccess          [boolean or string, optional]
+# reportOptionalCall                  [boolean or string, optional]
+# reportOptionalIterable              [boolean or string, optional]
+# reportOptionalContextManager        [boolean or string, optional]
+# reportOptionalOperand               [boolean or string, optional]
+# reportTypedDictNotRequiredAccess    [boolean or string, optional]
+# reportUntypedFunctionDecorator      [boolean or string, optional]
+# reportUntypedClassDecorator         [boolean or string, optional]
+# reportUntypedBaseClass              [boolean or string, optional]
+# reportUntypedNamedTuple             [boolean or string, optional]
+# reportPrivateUsage                  [boolean or string, optional]
+# reportConstantRedefinition          [boolean or string, optional]
+# reportIncompatibleMethodOverride    [boolean or string, optional]
+# reportIncompatibleVariableOverride  [boolean or string, optional]
+# reportOverlappingOverload           [boolean or string, optional]
+# reportUninitializedInstanceVariable [boolean or string, optional]
+# reportInvalidStringEscapeSequence   [boolean or string, optional]
+# reportUnknownParameterType          [boolean or string, optional]
+# reportUnknownArgumentType           [boolean or string, optional]
+# reportUnknownLambdaType             [boolean or string, optional]
+# reportUnknownVariableType           [boolean or string, optional]
+# reportUnknownMemberType             [boolean or string, optional]
+# reportMissingTypeArgument           [boolean or string, optional]
+# reportInvalidTypeVarUse             [boolean or string, optional]
+# reportCallInDefaultInitializer      [boolean or string, optional]
+# reportUnnecessaryIsInstance         [boolean or string, optional]
+# reportUnnecessaryCast               [boolean or string, optional]
+# reportUnnecessaryComparison         [boolean or string, optional]
+# reportAssertAlwaysTrue              [boolean or string, optional]
+# reportSelfClsParameterName          [boolean or string, optional]
+# reportImplicitStringConcatenation   [boolean or string, optional]
+# reportUndefinedVariable             [boolean or string, optional]
+# reportUnboundVariable               [boolean or string, optional]
+# reportInvalidStubStatement          [boolean or string, optional]
+# reportIncompleteStub                [boolean or string, optional]
+# reportUnsupportedDunderAll          [boolean or string, optional]
+# reportUnusedCallResult              [boolean or string, optional]
+# reportUnusedCoroutine               [boolean or string, optional]
