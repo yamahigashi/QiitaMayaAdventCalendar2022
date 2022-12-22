@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+
+
+##############################################################
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+
+
+##############################################################
+# python env
+export PATH=$SCRIPT_DIR/../python/darwin:$SCRIPT_DIR/../python/darwin/Scripts:$PATH
+# PYTHONHOME=$SCRIPT_DIR/../python/darwin
+export PYTHONPATH=$SCRIPT_DIR/python/darwin/site-packages:$PYTHONPATH
+
+##############################################################
+# configure Rez
+export REZ_CONFIG_FILE=$SCRIPT_DIR/../rez-packages/rezconfig.py
+export ALLZPARK_CONFIG_FILE=$SCRIPT_DIR/../rez-packages/allzparkconfig.py
+
+echo $REZ_CONFIG_FILE
+echo $ALLZPARK_CONFIG_FILE
+
+##############################################################
+# launch the launcher
+python3 $SCRIPT_DIR/../scripts/launch_allzpark.py
+##############################################################
