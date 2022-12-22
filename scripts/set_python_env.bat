@@ -1,7 +1,7 @@
 @echo off
 
 
-set REL_PATH=%~dp0..\bin\python-3.9\win
+set REL_PATH=%~dp0..\bin\python\win
 set ABS_PATH=
 
 rem ////////////////////////////////////////////////////////////////////////////

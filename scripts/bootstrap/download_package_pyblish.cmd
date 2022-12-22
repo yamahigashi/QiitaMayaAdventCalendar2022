@@ -31,8 +31,8 @@ powershell -Command "Expand-Archive 1.11.4.zip -DestinationPath ."
 rem move /Y pyblish-qml-1.11.4\* .
 popd
 
-cd /D %~dp0\..\..\bin\python-3.9\win
-python -m pip install pyblish_base==1.8.10 --upgrade
+cd /D %~dp0\..\..\bin\python\win
+python -m pip install pyblish_base==1.8.8 --upgrade
 python -m pip install pyblish_qml==1.11.4 --upgrade
-python -m pip install pyblish_maya==2.1.10 --upgrade
+python -m pip install pyblish_maya==2.1.8 --upgrade
 popd
