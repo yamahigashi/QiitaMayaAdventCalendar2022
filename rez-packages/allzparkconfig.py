@@ -27,8 +27,6 @@ help_url = "https://allzpark.com"
 
 _directory = Path(__file__).parent
 base = Path(_directory)
-package_files = list(base.rglob("package.py"))
-candidates = set([x.parent.parent.parent.as_posix() for x in package_files])
 
 
 def profiles():
